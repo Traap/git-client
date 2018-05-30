@@ -1,0 +1,60 @@
+case:
+  name: Clone Repository
+
+  purpose: >
+    This test case demonstrates a developer is able to clone a remote repository
+    and use it as a local repository.
+
+  requirement: IUR-004 and IUR-007
+
+  workingdir: package-1
+
+  steps:
+    - confirm: A developer is able to clone a remote repository.
+      expectation: No error.
+      sudo: false
+      command: git
+      argument: clone https://bitbucket-vial.intra.fresenius.com/scm/san/quicksort.git
+      evidence: Starts on next line.
+
+    - confirm: A developer is able to disable color output to the terminal. 
+      expectation: No error. 
+      workingdir: package-1/quicksort
+      sudo: false
+      command: git
+      argument: config --local color.ui false 
+      evidence: n/a 
+
+    - confirm: Git is configured to disable color.
+      expectation: .git/config ui section shows color set to true. 
+      workingdir: package-1/quicksort
+      sudo: false
+      command: cat 
+      argument: .git/config
+      evidence: Starts on next line. 
+
+    - confirm: >
+        A developer is working on master branch and up-to-date after
+        cloning a remote repository.
+      expectation: Branch information is displayed.
+      workingdir: package-1/quicksort
+      sudo: false
+      command: git
+      argument: status
+      evidence: Starts on next line.
+
+    - confirm: A developer is able to review a set of tracked repositories.
+      expectation: Fetch and puch URLs are identical
+      workingdir: package-1/quicksort
+      sudo: false
+      command: git
+      argument: remote -v
+      evidence: n/a
+
+    - confirm: A developer's local and remote branches are mapped to master branch.
+      expectation: Local and remote branch are mapped to master branch..
+      workingdir: package-1/quicksort
+      sudo: false
+      command: git
+      argument: branch -a
+      evidence: n/a

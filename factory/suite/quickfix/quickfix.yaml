@@ -1,0 +1,15 @@
+suite:
+  name: Quick Fix to Software 
+
+  purpose: >
+    This test suite ensures a developer is able to swich working contexts from 
+    the master branch to a quick-fix branch to make programming changes.
+
+  requirement: >
+    IUR-002, IUR-003, IUR-004, IUR-005, IUR-006, IUR-007, IUR-008, and IUR-009.
+
+includes:
+  - case:
+    - name: create-quick-fix
+    - name: undo-quick-fix
+    - name: merge-quick-fix

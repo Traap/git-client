@@ -1,0 +1,37 @@
+\clearpage
+\section{Prerequisites}
+\begin{enumerate}
+  \item A valid Git username and password.  Request these from your Git administrator.
+
+  \item Read and write access to https://bitbucket-vial.intra.fresenius.com/projects/SAN/repos/quicksort
+
+  \item A private / public SSH key.
+
+  \item Your public key needs to be upload to your Git account.  Request
+    assistance from your Git administrator.
+
+  \item Administrative rights to your computer.  Contact your computer systems
+    administrator.
+
+  \item Your computer requires HTTP, HTTPS, and SSH access to the Internet.
+    Contact your network administrator.
+
+  \item Configure your ~/.ssh/config file to reference Git your Git Server.
+
+  \begin{verbatim}
+
+      # Access to HostName when disconnected from a Company network.
+      Host github.com 
+          User username
+          IdentityFile ~/.ssh/github_rsa
+
+      # All hosts
+      Host *
+          ServerAliveInterval 300
+          IdentityFile ~/.ssh/github_rsa
+          User gahoward
+          Port 22
+          
+  \end{verbatim}
+
+\end{enumerate}

@@ -1,0 +1,13 @@
+suite:
+  name: Clone Remote Repository 
+
+  purpose: >
+    This test suite ensures a developer can clone a remote repository, make 
+    changes to it, and revert the changes.
+
+  requirement: IUR-003, IUR-004, IUR-005, IUR-007, and IUR-008
+
+includes:
+  - case:
+    - name: clone-repo
+    - name: revert-merged-change

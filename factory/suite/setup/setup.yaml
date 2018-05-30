@@ -1,0 +1,14 @@
+suite:
+  name: Git Client Setup
+
+  purpose: >
+    This test suite ensures the Git client has been installed and is operational.
+
+  requirement: >
+    IUR-000, IUR-001, IUR-002, IUR-003, IUR-004, IUR-005, and IUR-006. 
+
+includes:
+  - case:
+    - name: check-install 
+    - name: configure-git
+    - name: create-local-repo

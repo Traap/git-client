@@ -1,0 +1,13 @@
+suite:
+  name: Git Tagging 
+
+  purpose: >
+    This test suite ensures a developer is able to tag git-commits, create new
+    branches based on git-tags, and perform new work on a new branch.
+
+  requirement: >
+    IUR-002, IUR-003, IUR-004, IUR-006, IUR-007, IUR-008, and IUR-009.
+
+includes:
+  - case:
+    - name: tag-commits
