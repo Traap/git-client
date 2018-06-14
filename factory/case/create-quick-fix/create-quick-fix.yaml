@@ -14,7 +14,7 @@ case:
   workingdir: package-1/quicksort
 
   steps:
-    - confirm: A developer is albe to download a git repository.
+    - confirm: A developer is able to download a git repository.
       expectation: No error.
       sudo: false
       command: git
@@ -70,7 +70,7 @@ case:
       expectation: No error.
       sudo: false
       command: git
-      argument: commit -m "Chnage all [a] to [Z]"
+      argument: commit -m "Change all [a] to [Z]"
       evidence: Starts on next line.
 
     - confirm: A developer is able to update the remote repository.

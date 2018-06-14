@@ -17,11 +17,11 @@
   or the specified tree.  If no paths are given, git checkout will also update
   the HEAD to set the specified branch as the current branch.
 
-\item[tag - annotated] \quad A full object in Git database that is checksummed,
-  contains the tagger name, email and date; has a tagging message; and can be
-  signed with GNU Privacy Guard.
+\item[tag - annotated] \quad Tag objects are called `annotated' tags; they
+  contain a creation date, the tagger name and email, a tagging message, and an
+  optional GnuPG signature.
 
-\item[tag - lightweight] \quad A pointer to a specific commit that does not change.
-
+\item[tag - lightweight] \quad Simply a name for a commit object.  The object is
+  usually a commit object.
 
 \end{description}
