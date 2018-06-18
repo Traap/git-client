@@ -39,7 +39,7 @@ case:
       sudo: false
       command: git
       argument: init
-      evidence: n/a
+      evidence: Starts on next line.
 
     - confirm: A developer is able to disable color output to the terminal. 
       expectation: No error. 

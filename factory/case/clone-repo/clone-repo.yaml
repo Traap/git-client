@@ -44,7 +44,7 @@ case:
       evidence: Starts on next line.
 
     - confirm: A developer is able to review a set of tracked repositories.
-      expectation: Fetch and puch URLs are identical
+      expectation: Fetch and pull URLs are identical
       workingdir: package-1/quicksort
       sudo: false
       command: git
@@ -56,5 +56,5 @@ case:
       workingdir: package-1/quicksort
       sudo: false
       command: git
-      argument: branch -a
+      argument: branch -vv
       evidence: n/a
