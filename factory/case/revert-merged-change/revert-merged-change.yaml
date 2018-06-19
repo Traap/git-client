@@ -16,14 +16,14 @@ case:
       sudo: false
       command: git
       argument: pull
-      evidence: Starts on next line.
+      evidence: n/a 
 
     - confirm: A developer is able to remove all files from the local repository.
       expectation: No error.
       sudo: false
       command: git
       argument: rm src/Main.hs src/QuickSort.hs
-      evidence: Starts on next line.
+      evidence: n/a 
 
     - confirm: A developer is able to commit file removals.
       expectation: No error.
@@ -37,7 +37,7 @@ case:
       sudo: false
       command: git
       argument: push
-      evidence: Starts on next line.
+      evidence: n/a 
 
     - confirm: A developer is able to review the commits to the repository.
       expectation: Update has been processed.
@@ -65,7 +65,7 @@ case:
       sudo: false
       command: git
       argument: push
-      evidence: Starts on next line.
+      evidence: n/a 
 
     - confirm: A developer is able to review the commits to the repository.
       expectation: Update has been processed.

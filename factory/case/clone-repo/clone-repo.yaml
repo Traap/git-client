@@ -49,7 +49,7 @@ case:
       sudo: false
       command: git
       argument: remote -v
-      evidence: n/a
+      evidence: Starts on next line.
 
     - confirm: A developer's local and remote branches are mapped to master branch.
       expectation: Local and remote branch are mapped to master branch..
@@ -57,4 +57,4 @@ case:
       sudo: false
       command: git
       argument: branch -vv
-      evidence: n/a
+      evidence: Starts on next line.
