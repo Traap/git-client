@@ -23,7 +23,7 @@ case:
       sudo: false
       command: git
       argument: pull
-      evidence: Starts on next line.
+      evidence: n/a 
 
     - confirm: A developer is able to checkout a quick-fix branch to their local repository.
       expectation: No error.
@@ -37,7 +37,7 @@ case:
       sudo: false
       command: git
       argument: pull
-      evidence: Starts on next line.
+      evidence: n/a 
 
     - confirm: A developer is able to return to their master branch.
       expectation: No error.

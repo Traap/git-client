@@ -14,45 +14,21 @@ case:
     v2.1 & 440ba8b56feb5941783b9cb57ed192391cd251c6 \\ \hline
     v2.2 & c47279b87ed77413792908818215f53364567bb1 \\ \hline
     \end{longtable}
-    \\
+
     A Git Checksum is unique to a Git installation and are listed here as
     examples.  In the event these tags do not exist, the following commands are
     used to recreate them and publish them to the git server.
-    \\
-    git tag v1.0 [git-checksum]
-    \\
+
+        \textbf{git tag v1.0 [git-checksum]}
+
     where git-checksum is the git-commit-id you are associating
     the tags with.  Git-commit-id's are globally-uniquie.
-    \\
-    git push origin --tags
+
+        \textbf{git push origin --tags}
 
   requirement: IUR-002, IUR-003, IUR-004, IUR-006, IUR-007, IUR-008, and IUR-009.
 
   workingdir: package-1/quicksort
-
-  # Address Kyle's tagging comments.
-  #
-  # IUR-000, As a administrator, I want the configuration management metadata
-  # such as date of commit, user who performed the commit, and revision
-  # information on the files included in the commit so that I can use it to
-  # support my release process.
-  #
-  # IUR-001 As a administrator, I want a complete list of files and revision
-  # information for a given repository to support my release process.
-  #
-  # Might use: Command to list all git-tracked files at a given tag/label/branch
-  # head:
-  #
-  # git ls-tree --full-tree -r --name-only <LABEL_NAME_HERE> 
-  #
-  # Command to list all revision information for a repository 
-  # (date/user/commit comment etc):
-  #
-  # git log <LABEL_NAME_HERE>
-  #
-  # Or to show only changes since the previous release:
-  #
-  # git log <PREVIOUS_LABEL>..<NEW_LABEL>
 
   steps:
     - confirm: Pre-existing tags are present.
@@ -69,18 +45,18 @@ case:
       argument: log --graph --pretty=format:'%h (%cr) <%cn> %d' --simplify-by-decoration
       evidence: Starts on next line.
 
+    - confirm: A complete list of files and revision information for v2.0 is listed.  
+      expectation: All files associated with v2.0 are listed. 
+      sudo: false
+      command: git
+      argument:  ls-tree --full-tree -r --name-only v2.0 
+      evidence: Starts on next line.
+
     - confirm: New branch b2.0 is created from tag v2.0.
       expectation: Switch to a new branch 'b2.0' is displayed.
       sudo: false
       command: git
       argument: checkout -b b2.0 v2.0
-      evidence: Starts on next line.
-
-    - confirm: "(HEAD, tag: v2.0, b2.0) is displayed for first git-commit."
-      expectation: "Git-commit history shows (HEAD, tag: v2.0, b2.0) at first commit."
-      sudo: false
-      command: git
-      argument: log --graph --pretty=format:'%h (%cr) <%cn> %d' --simplify-by-decoration
       evidence: Starts on next line.
 
     - confirm: New branch b1.1 is created from tag v1.1.

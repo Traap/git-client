@@ -19,14 +19,14 @@ case:
       sudo: false
       command: git
       argument: pull
-      evidence: Starts on next line.
+      evidence: n/a 
 
     - confirm: A developer is able to create a new branch.
       expectation: No error.
       sudo: false
       command: git
       argument: checkout -b quick-fix
-      evidence: Starts on next line.
+      evidence: n/a 
 
     - confirm: A developer is able to obtain a listing of all branches.
       expectation: No error.
@@ -78,7 +78,7 @@ case:
       sudo: false
       command: git
       argument: push origin quick-fix
-      evidence: Starts on next line.
+      evidence: n/a 
 
     - confirm: >
         A developer is able to establish branch tracking between the remote
@@ -94,7 +94,7 @@ case:
       sudo: false
       command: git
       argument: push
-      evidence: Starts on next line.
+      evidence: n/a 
 
     - confirm: >
         A developer is able to view difference between master and quick-fix
