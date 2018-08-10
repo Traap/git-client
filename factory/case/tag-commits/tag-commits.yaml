@@ -2,7 +2,7 @@ case:
   name: Tag Commits
 
   purpose: |
-    This teset case is used to demonstrate Git"s abbility to tag a
+    This teset case is used to demonstrate Git's abbility to tag a
     commit.  A Git repository has been pre-seeded with the following tags.
     \begin{longtable}
     {|C{1.2cm}|L{10cm}|} \hline
@@ -22,7 +22,7 @@ case:
         \textbf{git tag v1.0 [git-checksum]}
 
     where git-checksum is the git-commit-id you are associating
-    the tags with.  Git-commit-id"s are globally-uniquie.
+    the tags with.  Git-commit-id's are globally-uniquie.
 
         \textbf{git push origin --tags}
 
