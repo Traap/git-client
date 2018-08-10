@@ -14,18 +14,18 @@ and wsl.
 4. [Bundler](https://bundler.io)
 
 #### Clone Repositories
-1. [amber](https://bitbucket-vial.intra.fresenius.com/scm/soup/amber.git)
-2. [autodoc](https://bitbucket-vial.intra.fresenius.com/scm/soup/autodoc.git)
-3. [docbld](https://bitbucket-vial.intra.fresenius.com/scm/soup/docbld.git)
-4. [tlc-article](https://bitbucket-vial.intra.fresenius.com/scm/soup/tlc-article.git)
-5. [CoreWebApp](https://bitbucket-vial.intra.fresenius.com/scm/rdtest/corewebapp
-6. [QuickSort](https://bitbucket-vial.intra.fresenius.com/scm/san/quicksort)
+1. [amber](https://github.com/traap/amber)
+2. [autodoc](https://github.com/traap/autodoc)
+3. [docbld](https://github.com/traap/docbld)
+4. [tlc-article](https://github.com/traap/tlc-article)
+5. [CoreWebApp](https://github.com/traap/rdtest/corewebapp)
+6. [QuickSort](https://github.com/traap/san/quicksort)
 
 ### Validating Git Command Line Client
 1. Meet all perquisites
 2. Create shell
 3. Move to $HOME/git/git-client
-4. Run [amber](https://bitbucket-vial.intra.fresenius.com/scm/soup/amber.git)
+4. Run [amber](https://github.com/traap/amber.git)
 
 ```bash
 cd $HOME/git/git-client
