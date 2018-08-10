@@ -18,8 +18,8 @@ and wsl.
 2. [autodoc](https://github.com/traap/autodoc)
 3. [docbld](https://github.com/traap/docbld)
 4. [tlc-article](https://github.com/traap/tlc-article)
-5. [CoreWebApp](https://github.com/traap/rdtest/corewebapp)
-6. [QuickSort](https://github.com/traap/san/quicksort)
+5. [CoreWebApp](https://github.com/traap/corewebapp)
+6. [QuickSort](https://github.com/traap/quicksort)
 
 ### Validating Git Command Line Client
 1. Meet all perquisites
