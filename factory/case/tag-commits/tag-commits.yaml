@@ -2,7 +2,7 @@ case:
   name: Tag Commits
 
   purpose: |
-    This teset case is used to demonstrate Git's abbility to tag a
+    This teset case is used to demonstrate Git"s abbility to tag a
     commit.  A Git repository has been pre-seeded with the following tags.
     \begin{longtable}
     {|C{1.2cm}|L{10cm}|} \hline
@@ -22,7 +22,7 @@ case:
         \textbf{git tag v1.0 [git-checksum]}
 
     where git-checksum is the git-commit-id you are associating
-    the tags with.  Git-commit-id's are globally-uniquie.
+    the tags with.  Git-commit-id"s are globally-uniquie.
 
         \textbf{git push origin --tags}
 
@@ -42,7 +42,7 @@ case:
       expectation: Git-commit history is shown without error.
       sudo: false
       command: git
-      argument: log --graph --pretty=format:'%h (%cr) <%cn> %d' --simplify-by-decoration
+      argument: log --graph --pretty=format:"%h (%cr) <%cn> %d" --simplify-by-decoration
       evidence: Starts on next line.
 
     - confirm: A complete list of files and revision information for v2.0 is listed.  
@@ -53,14 +53,14 @@ case:
       evidence: Starts on next line.
 
     - confirm: New branch b2.0 is created from tag v2.0.
-      expectation: Switch to a new branch 'b2.0' is displayed.
+      expectation: Switch to a new branch "b2.0" is displayed.
       sudo: false
       command: git
       argument: checkout -b b2.0 v2.0
       evidence: Starts on next line.
 
     - confirm: New branch b1.1 is created from tag v1.1.
-      expectation: Switch to a new branch 'b1.1' is displayed.
+      expectation: Switch to a new branch "b1.1" is displayed.
       sudo: false
       command: git
       argument: checkout -b b1.1 v1.1
@@ -70,7 +70,7 @@ case:
       expectation: "Git-commit history shows (HEAD, tag: v1.1, b1.1) at first commit."
       sudo: false
       command: git
-      argument: log --graph --pretty=format:'%h (%cr) <%cn> %d' --simplify-by-decoration
+      argument: log --graph --pretty=format:"%h (%cr) <%cn> %d" --simplify-by-decoration
       evidence: Starts on next line.
 
     - confirm: Branches b1.1, b2.0 and master exist.
@@ -81,48 +81,48 @@ case:
       evidence: Starts on next line.
 
     - confirm: Switch to master branch.
-      expectation: Switch to branch 'master' is displayed.
+      expectation: Switch to branch "master" is displayed.
       sudo: false
       command: git
       argument: checkout master
       evidence: Starts on next line.
 
     - confirm: Master branch is not tagged with v3.0.
-      expectation: At minimum, '(HEAD, origin/master, origin/HEAD, master)' is displayed for first commit.
+      expectation: At minimum, "(HEAD, origin/master, origin/HEAD, master)" is displayed for first commit.
       sudo: false
       command: git
-      argument: log --graph --pretty=format:'%h (%cr) <%cn> %d' --simplify-by-decoration
+      argument: log --graph --pretty=format:"%h (%cr) <%cn> %d" --simplify-by-decoration
       evidence: Starts on next line.
 
-    - confirm: Add tag 'v3.0' is added to HEAD.
+    - confirm: Add tag "v3.0" is added to HEAD.
       expectation: No error.
       sudo: false
       command: git
       argument: tag v3.0
       evidence: Starts on next line.
 
-    - confirm: Tag 'v3.0' is added to HEAD.
+    - confirm: Tag "v3.0" is added to HEAD.
       expectation: "At minimum, '(HEAD, tag: v3.0, origin/master, origin/HEAD, master)' is displayed for first commit."
       sudo: false
       command: git
-      argument: log --graph --pretty=format:'%h (%cr) <%cn> %d' --simplify-by-decoration
+      argument: log --graph --pretty=format:"%h (%cr) <%cn> %d" --simplify-by-decoration
       evidence: Starts on next line.
 
-    - confirm: Tag 'v3.0' is deleted.
+    - confirm: Tag "v3.0" is deleted.
       expectation: No error.
       sudo: false
       command: git
       argument: tag -d v3.0
       evidence: Starts on next line.
 
-    - confirm: Branch 'b1.1' is deleted.
+    - confirm: Branch "b1.1" is deleted.
       expectation: No error.
       sudo: false
       command: git
       argument: branch -d b1.1
       evidence: Starts on next line.
 
-    - confirm: Branch 'b2.0' is deleted.
+    - confirm: Branch "b2.0" is deleted.
       expectation: No error.
       sudo: false
       command: git
