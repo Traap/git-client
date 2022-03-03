@@ -14,24 +14,24 @@ case:
       expectation: No error.
       sudo: false
       command: git
-      argument: clone https://bitbucket-vial.intra.fresenius.com/scm/san/quicksort.git
+      argument: clone https:github.com/Traap/quicksort.git
       evidence: Starts on next line.
 
-    - confirm: A developer is able to disable color output to the terminal. 
-      expectation: No error. 
+    - confirm: A developer is able to disable color output to the terminal.
+      expectation: No error.
       workingdir: package-1/quicksort
       sudo: false
       command: git
-      argument: config --local color.ui false 
-      evidence: n/a 
+      argument: config --local color.ui false
+      evidence: n/a
 
     - confirm: Git is configured to disable color.
-      expectation: .git/config ui section shows color set to true. 
+      expectation: .git/config ui section shows color set to true.
       workingdir: package-1/quicksort
       sudo: false
-      command: cat 
+      command: cat
       argument: .git/config
-      evidence: Starts on next line. 
+      evidence: Starts on next line.
 
     - confirm: >
         A developer is working on master branch and up-to-date after
