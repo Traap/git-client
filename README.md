@@ -1,6 +1,6 @@
-### WebDriver
-This repository is used to validate Git client tool
-in accordance FDA Quality Systems Regulation 820.70(i) Automated Processes.
+### Git-Client
+This repository is used to validate the Git client tool in accordance FDA
+Quality Systems Regulation 820.70(i) Automated Processes.
 
 ### Supported Systems
 **git-client** has been tested with cygwin, linix, linux (mint), mingw32,
@@ -35,5 +35,5 @@ amber --verbose --nodryrun --writer=LaTeX --plan=command-line
 docbld
 ```
 
-### Review the git-client-validation.pdf
-Report moved to **_build/git-client-validation.pdf**
+### Review the git-client.pdf
+Report moved to **_build/git-client.pdf**
