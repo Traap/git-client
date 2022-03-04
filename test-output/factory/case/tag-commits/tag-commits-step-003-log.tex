@@ -1,0 +1,12 @@
+\begin{description}[align=right,leftmargin=3.2cm,labelindent=3.0cm]
+\item[Step:] 3
+\item[Confirm:] A complete list of files and revision information for v2.0 is listed.
+\item[Expectation:] All files associated with v2.0 are listed.
+\item[Command:] echo git  ls-tree --full-tree -r --name-only v2.0
+\item[Test Result:] PASS
+\item[Evidence:] Starts on next line.
+\end{description}
+\begin{lstlisting}[numbers=left]
+git ls-tree --full-tree -r --name-only v2.0
+
+\end{lstlisting}

@@ -1,7 +1,7 @@
 case:
-  name: Merge a programing change made on branch named Quick Fix
+  name: Merge a programming change made on branch named Quick Fix
 
-  purpose: > 
+  purpose: >
     This test case demonstrates a developer's ability to merge a code change
     from a working branch to the master branch that the team treats as their
     central repository makes the code available to others.
@@ -23,7 +23,7 @@ case:
       sudo: false
       command: git
       argument: pull
-      evidence: n/a 
+      evidence: n/a
 
     - confirm: A developer is able to checkout a quick-fix branch to their local repository.
       expectation: No error.
@@ -37,7 +37,7 @@ case:
       sudo: false
       command: git
       argument: pull
-      evidence: n/a 
+      evidence: n/a
 
     - confirm: A developer is able to return to their master branch.
       expectation: No error.
@@ -67,11 +67,11 @@ case:
       argument: merge quick-fix
       evidence: Starts on next line.
 
-    - confirm: A developer is able to update the remote repository with the results of the merge operation. 
+    - confirm: A developer is able to update the remote repository with the results of the merge operation.
       expectation: No error.
       sudo: false
       command: git
-      argument: push 
+      argument: push
       evidence: Starts on next line.
 
     - confirm: A developer is able to review the results of the merge operation.
@@ -81,21 +81,21 @@ case:
       argument: branch --merged
       evidence: Starts on next line.
 
-    - confirm: A developer is able to delete the quick-fix branch from the local repository.  
+    - confirm: A developer is able to delete the quick-fix branch from the local repository.
       expectation: Local quick-fix branch has been removed.
       sudo: false
       command: git
       argument: branch --delete quick-fix
       evidence: Starts on next line.
 
-    - confirm: A developer is able to delete the quick-fix branch from the remote repository. 
+    - confirm: A developer is able to delete the quick-fix branch from the remote repository.
       expectation: No error.
       sudo: false
       command: git
       argument: push origin --delete quick-fix
       evidence: Starts on next line.
 
-    - confirm: A developer is able to determine the remote and local quick-fix branches have been deleted. 
+    - confirm: A developer is able to determine the remote and local quick-fix branches have been deleted.
       expectation: No error.
       sudo: false
       command: git

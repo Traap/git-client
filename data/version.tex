@@ -1,6 +1,8 @@
+% ------------------------------------------------------------------------------
 % Seed our header and footer with some useful information.
-\newcommand{\hfVersion}{123-VNV-055623 [A]}
-\newcommand{\hfDate}{\today}
-\newcommand{\hfStatus}{FINAL}
-\newcommand{\hfInstitution}{Fresenius-Kabi}
-\newcommand{\hfPermission}{Data Management}
+\input{\autodocDir/boilerplate/data/version.tex}%
+
+% ------------------------------------------------------------------------------
+% Override version information when necessary.
+\renewcommand{\hfVersion}{git-client}%
+\renewcommand{\hfRevision}{[C]}%

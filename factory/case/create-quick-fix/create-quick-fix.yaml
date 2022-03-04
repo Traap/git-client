@@ -8,7 +8,7 @@ case:
     commit the change to the local git repository and push it to the remote git
     repository.
 
-  requirement: > 
+  requirement: >
     IUR-002, IUR-003, IUR-004, IUR-005, IUR-006, IUR-007, IUR-008, and IUR-009.
 
   workingdir: package-1/quicksort
@@ -19,14 +19,14 @@ case:
       sudo: false
       command: git
       argument: pull
-      evidence: n/a 
+      evidence: n/a
 
     - confirm: A developer is able to create a new branch.
       expectation: No error.
       sudo: false
       command: git
       argument: checkout -b quick-fix
-      evidence: n/a 
+      evidence: n/a
 
     - confirm: A developer is able to obtain a listing of all branches.
       expectation: No error.
@@ -78,12 +78,12 @@ case:
       sudo: false
       command: git
       argument: push origin quick-fix
-      evidence: n/a 
+      evidence: n/a
 
     - confirm: >
         A developer is able to establish branch tracking between the remote
         repository and new branch.
-      expectation: Tracking has been establishe.
+      expectation: Tracking has been established.
       sudo: false
       command: git
       argument: branch -u origin/quick-fix quick-fix
@@ -94,7 +94,7 @@ case:
       sudo: false
       command: git
       argument: push
-      evidence: n/a 
+      evidence: n/a
 
     - confirm: >
         A developer is able to view difference between master and quick-fix

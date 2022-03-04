@@ -1,0 +1,12 @@
+\begin{description}[align=right,leftmargin=3.2cm,labelindent=3.0cm]
+\item[Step:] 6
+\item[Confirm:] A developer is able to make a software change.
+\item[Expectation:] No error.
+\item[Command:] echo sed  -i.bak -e s/\textbackslash\textbackslash[Z\textbackslash\textbackslash]/\textbackslash\textbackslash[a\textbackslash\textbackslash]/g QuickSort.hs
+\item[Test Result:] PASS
+\item[Evidence:] Starts on next line.
+\end{description}
+\begin{lstlisting}[numbers=left]
+sed -i.bak -e s/\[Z\]/\[a\]/g QuickSort.hs
+
+\end{lstlisting}

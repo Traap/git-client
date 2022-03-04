@@ -1,8 +1,8 @@
 suite:
-  name: Quick Fix to Software 
+  name: Quick Fix to Software
 
   purpose: >
-    This test suite ensures a developer is able to swich working contexts from 
+    This test suite ensures a developer is able to switch working contexts from
     the master branch to a quick-fix branch to make programming changes.
 
   requirement: >

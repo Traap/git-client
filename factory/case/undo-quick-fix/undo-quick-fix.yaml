@@ -16,7 +16,7 @@ case:
       expectation: No error.
       sudo: false
       command: git
-      argument: checkout master 
+      argument: checkout master
       evidence: Starts on next line.
 
     - confirm: >
@@ -78,7 +78,7 @@ case:
       evidence: Starts on next line.
 
     - confirm: >
-        A developer is able to determine thier change has been added to the
+        A developer is able to determine their change has been added to the
         local repository.
       expectation: File changes are being tracked by local repository.
       sudo: false
@@ -86,7 +86,7 @@ case:
       argument: status
       evidence: Starts on next line.
 
-    - confirm: A developer is able to commit change to the the local repository.
+    - confirm: A developer is able to commit change to the local repository.
       expectation: No error.
       sudo: false
       command: git

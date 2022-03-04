@@ -2,7 +2,7 @@ case:
   name: Tag Commits
 
   purpose: |
-    This teset case is used to demonstrate Git's abbility to tag a
+    This test case is used to demonstrate Git's ability to tag a
     commit.  A Git repository has been pre-seeded with the following tags.
     \begin{longtable}
     {|C{1.2cm}|L{10cm}|} \hline
@@ -22,7 +22,7 @@ case:
         \textbf{git tag v1.0 [git-checksum]}
 
     where git-checksum is the git-commit-id you are associating
-    the tags with.  Git-commit-id's are globally-uniquie.
+    the tags with.  Git-commit-id's are globally-unique.
 
         \textbf{git push origin --tags}
 
@@ -45,11 +45,11 @@ case:
       argument: log --graph --pretty=format:"%h (%cr) <%cn> %d" --simplify-by-decoration
       evidence: Starts on next line.
 
-    - confirm: A complete list of files and revision information for v2.0 is listed.  
-      expectation: All files associated with v2.0 are listed. 
+    - confirm: A complete list of files and revision information for v2.0 is listed.
+      expectation: All files associated with v2.0 are listed.
       sudo: false
       command: git
-      argument:  ls-tree --full-tree -r --name-only v2.0 
+      argument:  ls-tree --full-tree -r --name-only v2.0
       evidence: Starts on next line.
 
     - confirm: New branch b2.0 is created from tag v2.0.
