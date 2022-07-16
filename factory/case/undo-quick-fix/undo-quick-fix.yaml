@@ -58,7 +58,7 @@ case:
       workingdir: package-1/quicksort/src
       sudo: false
       command: sed
-      argument: -i.bak -e s/\\[Z\\]/\\[a\\]/g QuickSort.hs
+      argument: -i.bak -e s/\[Z\]/\[a\]/g QuickSort.hs
       evidence: Starts on next line.
 
     - confirm: >
