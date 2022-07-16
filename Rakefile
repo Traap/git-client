@@ -43,9 +43,9 @@ pdf_cmd = "rake --rakefile #{ENV['DOCBLDPATH']}/Rakefile"
 task default: :'validate:git'
 
 namespace :validate do
-  task git: %i[do_validation docbld]
+  task git: %i[run docbld]
 
-  task :do_validation do
+  task :run do
     puts validate_cmd.to_s
     _stdout, stderr, _status = Open3.capture3 validate_cmd
   rescue StandardError => e
