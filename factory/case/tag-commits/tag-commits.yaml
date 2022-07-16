@@ -19,12 +19,21 @@ case:
     examples.  In the event these tags do not exist, the following commands are
     used to recreate them and publish them to the git server.
 
-        \textbf{git tag v1.0 [git-checksum]}
+    \newline
+    \newline
+
+    \textbf{git tag v1.0 [git-checksum]}
+
+    \newline
+    \newline
 
     where git-checksum is the git-commit-id you are associating
     the tags with.  Git-commit-id's are globally-unique.
 
-        \textbf{git push origin --tags}
+    \newline
+    \newline
+
+    \textbf{git push origin --tags}
 
   requirement: IUR-002, IUR-003, IUR-004, IUR-006, IUR-007, IUR-008, and IUR-009.
 
