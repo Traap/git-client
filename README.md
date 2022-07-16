@@ -1,10 +1,9 @@
 ### Git-Client
-This repository is used to validate the Git client tool in accordance FDA
+This repository is used to validate the Git client tool in accordance with FDA
 Quality Systems Regulation 820.70(i) Automated Processes.
 
 ### Supported Systems
-**git-client** has been tested with cygwin, linix, linux (mint), mingw32,
-and wsl.
+**git-client** has been tested with cygwin, linix, mingw32, and wsl.
 
 ### Prerequisites
 #### Applications
@@ -18,8 +17,7 @@ and wsl.
 2. [autodoc](https://github.com/traap/autodoc)
 3. [docbld](https://github.com/traap/docbld)
 4. [tlc-article](https://github.com/traap/tlc-article)
-5. [CoreWebApp](https://github.com/traap/corewebapp)
-6. [QuickSort](https://github.com/traap/quicksort)
+5. [QuickSort](https://github.com/traap/quicksort)
 
 ### Validating Git Command Line Client
 1. Meet all perquisites
@@ -29,10 +27,10 @@ and wsl.
 
 ```bash
 cd $HOME/git/git-client
+```
 
-amber --verbose --nodryrun --writer=LaTeX --plan=command-line
-
-docbld
+```bash
+rake validate:git
 ```
 
 ### Review the git-client.pdf
