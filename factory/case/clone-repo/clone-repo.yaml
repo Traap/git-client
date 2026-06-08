@@ -2,19 +2,19 @@ case:
   name: Clone Repository
 
   purpose: >
-    This test case demonstrates a developer is able to clone a remote repository
-    and use it as a local repository.
+    This test case demonstrates a developer is able to clone the prepared
+    QuickSort validation remote and use it as a local repository.
 
   requirement: IUR-004 and IUR-007
 
   workingdir: package-1
 
   steps:
-    - confirm: A developer is able to clone a remote repository.
+    - confirm: A developer is able to clone the prepared QuickSort remote.
       expectation: No error.
       sudo: false
       command: git clone
-      argument: git@github.com:Traap/quicksort.git
+      argument: ../../../remote/quicksort.git
       evidence: Starts on next line.
 
     - confirm: A developer is able to disable color output to the terminal.
@@ -26,7 +26,7 @@ case:
       evidence: n/a
 
     - confirm: Git is configured to disable color.
-      expectation: .git/config ui section shows color set to true.
+      expectation: .git/config ui section shows color set to false.
       workingdir: package-1/quicksort
       sudo: false
       command: cat
@@ -34,8 +34,8 @@ case:
       evidence: Starts on next line.
 
     - confirm: >
-        A developer is working on master branch and up-to-date after
-        cloning a remote repository.
+        A developer is working on master branch and up-to-date after cloning the
+        prepared QuickSort remote.
       expectation: Branch information is displayed.
       workingdir: package-1/quicksort
       sudo: false

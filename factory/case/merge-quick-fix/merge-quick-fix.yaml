@@ -32,7 +32,7 @@ case:
       argument: checkout quick-fix
       evidence: Starts on next line.
 
-    - confirm: A developer is able to update the local copy of their quick-bix branch.
+    - confirm: A developer is able to update the local copy of their quick-fix branch.
       expectation: No error.
       sudo: false
       command: git

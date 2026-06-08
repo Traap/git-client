@@ -1,16 +1,7 @@
 \documentclass[10pt]{tlc-article}
+\usepackage{newpxtext,newpxmath}%
+\usepackage{multirow}%
 \begin{document}
-
-  \global\def\configurationitem{Git}
-
-  \tlcTitlePageAndTableOfContents
-    {Git Client Tool Validation}
-    {Super Smart People}
-    {Throughout this document Git is the Configuration Item that is being
-     validated and Report Package is Git Report Package.  Git is
-     considered validated after this Report Package has been executed, test
-     evidence has been obtained, and that test evidence supports the conclusion
-     the Intended Use Requirements (IUR) have been satisfied.}
-
-  \input{\toolTestDir/main.tex}
+  \stdToolTestDoc{Git Client}
+  \printGlossaries%
 \end{document}

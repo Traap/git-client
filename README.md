@@ -1,9 +1,20 @@
 ### Git-Client
-This repository is used to validate the Git client tool in accordance with FDA
-Quality Systems Regulation 820.70(i) Automated Processes.
+This repository validates the Git command line client as a software lifecycle
+tool.  The validation is automated by
+[amber](https://github.com/traap/amber), documented with
+[autodoc](https://github.com/traap/autodoc), built with
+[docbld](https://github.com/traap/docbld), and exercised against the
+[QuickSort](https://github.com/traap/quicksort) product repository.
+
+Each `~/soup` folder is treated as a complete product checkout.  `git-client`
+uses the local `~/soup/quicksort` repository to prepare a temporary bare Git
+remote under `remote/quicksort.git` inside the current `git-client` checkout;
+Amber then validates Git CLI behavior by cloning, branching, committing,
+pushing, merging, reverting, and tagging against that local remote.
 
 ### Supported Systems
-**git-client** has been tested with cygwin, linix, mingw32, and wsl.
+**git-client** targets Linux-like shells with Ruby, Git, Amber, Autodoc, docbld,
+and tlc-article available.
 
 ### Prerequisites
 #### Applications
@@ -20,18 +31,20 @@ Quality Systems Regulation 820.70(i) Automated Processes.
 5. [QuickSort](https://github.com/traap/quicksort)
 
 ### Validating Git Command Line Client
-1. Meet all perquisites
-2. Create shell
-3. Move to $HOME/git/git-client
-4. Run [amber](https://github.com/traap/amber.git)
+1. Meet all prerequisites.
+2. Ensure `AMBERPATH`, `AUTODOCPATH`, and `DOCBLDPATH` are defined.
+3. Ensure `~/soup/quicksort` is present.
+4. Move to `~/soup/git-client`.
+5. Run the validation task.
 
 ```bash
-cd $HOME/git/git-client
-```
-
-```bash
+cd ~/soup/git-client
 rake validate:git
 ```
+
+The validation task fails if required environment variables are missing, if the
+local QuickSort product checkout is unavailable, if Amber returns a non-zero
+status, or if docbld cannot build and deploy the report.
 
 ### Review the git-client.pdf
 Report moved to **_build/git-client.pdf**

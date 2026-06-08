@@ -1,37 +1,19 @@
 \clearpage
 \section{Prerequisites}
 \begin{enumerate}
-  \item A valid Git username and password.  Request these from your Git administrator.
+  \item A local Git client installation.
 
-  \item Read and write access to https://github.com/traap//quicksort
+  \item A local QuickSort product checkout at \verb|~/soup/quicksort|.
 
-  \item A private / public SSH key.
+  \item Ruby, Rake, Amber, Autodoc, docbld, and tlc-article installed and
+    available to the validation shell.
 
-  \item Your public key needs to be upload to your Git account.  Request
-    assistance from your Git administrator.
+  \item The \verb|AMBERPATH|, \verb|AUTODOCPATH|, and \verb|DOCBLDPATH|
+    environment variables must reference their corresponding product checkouts.
 
-  \item Administrative rights to your computer.  Contact your computer systems
-    administrator.
-
-  \item Your computer requires HTTP, HTTPS, and SSH access to the Internet.
-    Contact your network administrator.
-
-  \item Configure your ~/.ssh/config file to reference Git your Git Server.
-
-  \begin{verbatim}
-
-      # Access to HostName when disconnected from a Company network.
-      Host github.com
-          User username
-          IdentityFile ~/.ssh/github_rsa
-
-      # All hosts
-      Host *
-          ServerAliveInterval 300
-          IdentityFile ~/.ssh/github_rsa
-          User gahoward
-          Port 22
-
-  \end{verbatim}
+  \item The validation task must be run from the cloned \verb|git-client|
+    product checkout and must be allowed to create and replace
+    \verb|remote/quicksort.git| and local validation workspaces named
+    \verb|package-*|.
 
 \end{enumerate}

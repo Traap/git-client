@@ -105,7 +105,7 @@ case:
       evidence: Starts on next line.
 
     - confirm: Confirm a developer is able to commit files f1 and f2 to the local repo.
-      expectation: No errror.
+      expectation: No error.
       sudo: false
       command: git
       argument: commit -m "Initial-commit."
